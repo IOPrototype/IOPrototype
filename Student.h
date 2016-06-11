@@ -6,6 +6,7 @@ class Student :
 public:
 	void HandleAll();
 	Student(std::string&,std::string&,std::string&,std::string&,int,std::vector<Course>&,std::vector<int>&);
+	Student(std::string&,std::string&,std::string&,std::string&,int);
 	~Student(void);
 };
 

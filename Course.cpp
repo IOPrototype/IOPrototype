@@ -5,7 +5,7 @@
 Course::Course(int _ID,	std::string& _Name,
 	int _Level,
 	bool _IsFree,
-	float _Price
+	float _Price,int _Autor
 	)
 {
 	Name=_Name;
@@ -13,6 +13,7 @@ Course::Course(int _ID,	std::string& _Name,
 	IsFree=_IsFree;
 	Price=_Price;
 	ID=_ID;
+	Autor=_Autor;
 
 }
 

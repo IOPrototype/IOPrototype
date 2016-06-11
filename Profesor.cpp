@@ -12,6 +12,7 @@ Profesor::Profesor(std::string& _login,std::string& _password,std::string& _name
 	name=_name;
 	surname=_surname;
 	id=_id;
+	type=1;
 	for(int j=0;j<icourses.size();j++)
 		for(int i=0;i<_courses.size();i++)
 			if(_courses[i].getID()==icourses[j]) courses.push_back(_courses[i].getID());

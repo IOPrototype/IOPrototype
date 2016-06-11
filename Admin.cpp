@@ -13,6 +13,7 @@ Admin::Admin(std::string& _login,std::string& _password,std::string& _name,std::
 	name=_name;
 	surname=_surname;
 	id=_id;
+	type=0;
 	for(auto i=_courses.begin();i!=_courses.end();i++)
 		courses.push_back(i->getID());
 }

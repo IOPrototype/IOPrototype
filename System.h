@@ -12,7 +12,8 @@ class System
 	bool LoadUsers();
 	bool LoadCourses();
 	int Service();
-
+	bool LoginUser();
+	void Exit();
 public:
 	bool start();
 	System(void);

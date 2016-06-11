@@ -7,7 +7,10 @@
 int _tmain(int argc, _TCHAR* argv[])
 {
 	System sys;
-	sys.start();
-	return 0;
+	if(sys.start())	return 0;
+	else {
+		std::cerr << "Loading Failed";
+		return -1;
+	}
 }
 

@@ -4,7 +4,8 @@ class Profesor :
 	public Users
 {
 public:
-	Profesor(void);
+	void HandleAll();
+	Profesor(std::string&,std::string&,std::string&,std::string&,int,std::vector<Course>&,std::vector<int>&);
 	~Profesor(void);
 };
 

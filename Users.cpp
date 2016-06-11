@@ -5,7 +5,9 @@
 Users::Users(void)
 {
 }
-
+void Users::HandleAll(){
+	return;
+}
 
 Users::~Users(void)
 {

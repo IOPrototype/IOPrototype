@@ -1,7 +1,9 @@
 #pragma once
+#include "Course.h"
 class Users
 {
-	std::string login,password,type;
+protected:
+	std::string login,password,name,surname;
 	int id;
 	std::vector<int> courses;
 

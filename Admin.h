@@ -5,7 +5,8 @@ class Admin :
 {
 
 public:
-	Admin(void);
+	void HandleAll();
+	Admin(std::string&,std::string&,std::string&,std::string&,int,std::vector<Course>&);
 	~Admin(void);
 };
 

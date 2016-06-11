@@ -48,7 +48,7 @@ int System::Service(){
 
 
 bool System::start(){
-	if(this->LoadUsers() && this->LoadCourses()){
+	if(this->LoadCourses() && this->LoadUsers()){
 		while(this->Service()){		
 			system("cls");
 		}
@@ -60,11 +60,25 @@ bool System::start(){
 
 void System::Exit(){
 
-
-
+	return;
 }
 
 bool System::LoadCourses(){
+	std::fstream file;
+	file.open("Courses.txt");
+		if(!file.is_open()) return false;
+	std::string Name;
+	int Level,Autor;
+	bool IsFree;
+	float Price;
+	int ID;
+
+	while(!file.eof()){
+		file >> ID >> Name >> Level >> IsFree >> Price>> Autor;
+		courses.push_back(Course(ID, Name, Level, IsFree, Price,Autor));
+		if(file.peek()==-1) break;
+	}
+
 
 	return true;
 }
@@ -83,12 +97,20 @@ bool System::LoadUsers(){
 				file >>tmp;
 				temp.push_back(tmp);
 			}
+		/*
 		std::cout << id << login << pass << name << surname << type ;
 	
 		for(auto i=temp.begin();i!=temp.end();i++)
 			std::cout << *i;
-		//new user;
-		std::cout << std::endl;
+		*/
+		if(type==0)
+			users.push_back(new	Admin(login,pass,name,surname,id,courses));
+		else if(type==1)
+			users.push_back(new Profesor(login,pass,name,surname,id,courses,temp));
+		else if(type==2)
+			users.push_back(new Student(login,pass,name,surname,id,courses,temp));
+
+
 		temp.clear();
 		if(file.peek()==-1) break;
 	}

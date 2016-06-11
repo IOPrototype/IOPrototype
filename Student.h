@@ -4,7 +4,8 @@ class Student :
 	public Users
 {
 public:
-	Student(void);
+	void HandleAll();
+	Student(std::string&,std::string&,std::string&,std::string&,int,std::vector<Course>&,std::vector<int>&);
 	~Student(void);
 };
 

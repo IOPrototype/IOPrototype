@@ -2,12 +2,12 @@
 //
 
 #include "stdafx.h"
-
+#include "System.h"
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-
-
+	System sys;
+	sys.start();
 	return 0;
 }
 

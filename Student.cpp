@@ -67,19 +67,14 @@ bool Student::HandleAll(){
 					<< std::endl
 					<<"Press Enter to continue"
 					<< std::endl;
+
+				break;
+		}	
 				std::cin.clear();
 				std::cin.ignore(256,'\n');
 				std::cin.get();
-				break;
-		}	
-
 
 	}
-
-
-
-
-	return true;
 }
 
 Student::Student(const std::vector<const Course>* const _vcourses,const std::vector<const Users const*>* const _vusers,std::string& _login,std::string& _password,std::string& _name,std::string& _surname,int _id,std::vector<int>& icourses):vcourses(_vcourses), vusers(_vusers)
@@ -119,7 +114,7 @@ Student::~Student(void)
 	for(auto i=0;i<vcourses->size();i++){
 			for( auto j=courses.begin();j!=courses.end();j++)
 		if(vcourses->at(i).getID()==*j){
-			std::cout << i+1<< ".\n";
+			std::cout << vcourses->at(i).getID()+1<< ".\n";
 			vcourses->at(i).Print();
 			}
 	}
@@ -175,7 +170,7 @@ Student::~Student(void)
 
 	void Student::ShowAllCourses(){
 		for(auto i=0;i<vcourses->size();i++){
-			std::cout << i+1<< ".\n";
+			std::cout << vcourses->at(i).getID()+1<< ".\n";
 			vcourses->at(i).Print();
 	}
 	

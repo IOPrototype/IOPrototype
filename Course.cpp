@@ -17,6 +17,13 @@ Course::Course(int _ID,	std::string& _Name,
 	deleted=0;
 
 }
+
+void Course::SetaName(std::string value){
+
+	aName=value;
+}
+
+
 void Course::Execute() const
 {
 

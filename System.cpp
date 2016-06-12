@@ -131,8 +131,18 @@ void System::Exit(){
 		if(!(*i)->type ||(*i)->courses.empty())
 			file <<'\t' << "-1";
 		else
+		{
+		bool hflag=1;
 		for(auto j=(*i)->courses.begin();j!=(*i)->courses.end();j++)
-			file <<'\t' << *j;
+			for(auto k=courses.begin();k!=courses.end();k++)
+				if(!k->deleted && k->getID()==*j){
+					file <<'\t' << *j;
+					hflag=0;
+					break;
+				}
+		if(hflag)
+			file <<'\t' << "-1";
+		}
 		if((i+1)!=users.end() ){
 			for(auto j=i+1;j!=users.end();j++)
 				if((*j)->deleted) continue;
@@ -148,9 +158,9 @@ void System::Exit(){
 
 Users* System::LoginUser(){
 	std::string login,pass;
-	std::cout <<"Podaj login: ";
+	std::cout <<"Login: ";
 	std::cin >>login;
-	std::cout <<"Podaj haslo: ";
+	std::cout <<"Password: ";
 	std::cin >>pass;
 
 	for(auto i=users.begin();i!=users.end();i++){
@@ -184,21 +194,21 @@ bool System::LoadCourses(){
 void System::RegisterUser(){
 	std::string login,pass,name,surname;
 	int id=(*users.begin())->id;
-	std::cout<<"Podaj imie: ";
+	std::cout<<"Name: ";
 	std::cin >> name;
-	std::cout<<"Podaj Nazwisko: ";
+	std::cout<<"Surname: ";
 	std::cin >> surname;
-	std::cout<<"Podaj login: ";
+	std::cout<<"Login: ";
 	std::cin >> login;
 	for(auto i=users.begin();i!=users.end();i++){
 		if((*i)->id>id)id=(*i)->id;
 		if(!login.compare((*i)->login)){
-			std::cout<<"Login zajenty";
+			std::cout<<"Login taken";
 			return;
 		}
 	}
 	id++;
-	std::cout<<"Podaj haslo: ";
+	std::cout<<"Password: ";
 	std::cin >> pass;
 
 	users.push_back(new Student((const std::vector<const Course>* const) &courses ,(const std::vector<const Users const*>* const) &users, login,pass,name,surname,id));
@@ -229,7 +239,7 @@ bool System::LoadUsers(){
 		if(type==0)
 			users.push_back(new	Admin(&courses,&users,login,pass,name,surname,id));
 		else if(type==1)
-			users.push_back(new Profesor((const std::vector<Course>* const)&courses,(const std::vector<const Users const*>* const)&users,login,pass,name,surname,id,temp));
+			users.push_back(new Profesor((std::vector<Course>* const)&courses,(const std::vector<const Users const*>* const)&users,login,pass,name,surname,id,temp));
 		else if(type==2)
 			users.push_back(new Student((const std::vector<const Course>* const) &courses ,(const std::vector<const Users const*>* const) &users,login,pass,name,surname,id,temp));
 

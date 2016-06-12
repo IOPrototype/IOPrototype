@@ -10,6 +10,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	if(sys.start())	return 0;
 	else {
 		std::cerr << "Loading Failed";
+		std::cin.get();
 		return -1;
 	}
 }

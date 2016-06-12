@@ -3,7 +3,7 @@
 class Profesor :
 	public Users
 {
-	const std::vector<Course>* const vcourses;
+	std::vector<Course>* const vcourses;
 	const std::vector<const Users const*>* const vusers;
 
 	Notes notes;
@@ -11,17 +11,19 @@ class Profesor :
 	void SetPromotions();
 	void SetArticles();
 	void Advertisements();
+	void OpenNotes();
+
 
 	void AddNewCourse();
 	void EditCoures();
-	void DeleteCourse();
+	bool DeleteCourse();
 	void ShowAllCourses();
 	void ShowOwnedCourses();
-
+	void DeactivateAccount();
 
 public:
 	bool HandleAll();
-	Profesor(const std::vector<Course>* const,const std::vector<const Users const*>* const,std::string&,std::string&,std::string&,std::string&,int,std::vector<int>&);
+	Profesor(std::vector<Course>* const,const std::vector<const Users const*>* const,std::string&,std::string&,std::string&,std::string&,int,std::vector<int>&);
 	~Profesor(void);
 };
 

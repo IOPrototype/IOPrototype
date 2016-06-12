@@ -2,6 +2,8 @@
 class Course
 {
 	friend class System;
+	friend class Admin;
+	friend class Profesor;
 	std::string Name;
 	int Level;
 	int Author;
@@ -15,6 +17,9 @@ public:
 	int getID(){return ID;}
 	int getID() const {return ID;}
 
+	int getAuthor(){return Author;}
+	int getAuthor() const {return Author;}
+
 	float getPrice(){return Price;}
 	float getPrice() const {return Price;}
 
@@ -22,7 +27,7 @@ public:
 
 	void Print();
 	void Print() const;
-
+	void SetaName(std::string);
 	Course(int,	std::string&,
 	int,
 	bool,

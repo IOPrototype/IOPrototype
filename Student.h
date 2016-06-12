@@ -3,10 +3,29 @@
 class Student :
 	public Users
 {
+	const std::vector<const Course>* const vcourses;
+	const std::vector<const Users const*>* const vusers;
+
+	float Money;
+	Console console;
+	Notes notes;
+
+	void ShowOwnedCourses();
+	void ExecuteCourse();
+	void BuyCourse();
+	void DeactivateAccount();
+
+	void CustomizePage();
+
+	void OpenNotes();
+	void OpenConsole();
+	void ContactTeacher();
+	void PrintStatistics();
+
 public:
-	void HandleAll();
-	Student(std::string&,std::string&,std::string&,std::string&,int,std::vector<Course>&,std::vector<int>&);
-	Student(std::string&,std::string&,std::string&,std::string&,int);
+	bool HandleAll();
+	Student(const std::vector<const Course>* const,const std::vector<const Users const*>* const,std::string&,std::string&,std::string&,std::string&,int,std::vector<int>&);
+	Student(const std::vector<const Course>* const,const std::vector<const Users const*>* const,std::string&,std::string&,std::string&,std::string&,int);
 	~Student(void);
 };
 

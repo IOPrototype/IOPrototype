@@ -1,12 +1,12 @@
 #include "stdafx.h"
 #include "Admin.h"
 
-void Admin::HandleAll(){
-	return;
+bool Admin::HandleAll(){
+	return true;
 }
 
 
-Admin::Admin(std::string& _login,std::string& _password,std::string& _name,std::string& _surname,int _id, std::vector<Course>& _courses)
+Admin::Admin(std::vector<Course>* const _vcourses,std::vector<Users*>* _vusers,std::string& _login,std::string& _password,std::string& _name,std::string& _surname,int _id) : vcourses(_vcourses),vusers(_vusers)
 {
 	login=_login;
 	password=_password;
@@ -14,7 +14,8 @@ Admin::Admin(std::string& _login,std::string& _password,std::string& _name,std::
 	surname=_surname;
 	id=_id;
 	type=0;
-	for(auto i=_courses.begin();i!=_courses.end();i++)
+	deleted=0;
+	for(auto i=(*_vcourses).begin();i!=(*_vcourses).end();i++)
 		courses.push_back(i->getID());
 }
 

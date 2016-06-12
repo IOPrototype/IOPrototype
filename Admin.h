@@ -3,10 +3,11 @@
 class Admin :
 	public Users
 {
-
+	std::vector<Course>* const vcourses;
+	std::vector<Users*>* const vusers;
 public:
-	void HandleAll();
-	Admin(std::string&,std::string&,std::string&,std::string&,int,std::vector<Course>&);
+	bool HandleAll();
+	Admin(std::vector<Course>* const,std::vector<Users*>*,std::string&,std::string&,std::string&,std::string&,int);
 	~Admin(void);
 };
 

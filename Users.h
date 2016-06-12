@@ -7,11 +7,11 @@ protected:
 	std::string login,password,name,surname;
 	int id,type;
 	std::vector<int> courses;
-
+	bool deleted;
 public:
 	Users(void);
 	~Users(void);
-	virtual void HandleAll()=0;
+	virtual bool HandleAll()=0;
 
 
 /*

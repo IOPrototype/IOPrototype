@@ -13,11 +13,11 @@ class System
 	bool LoadUsers();
 	bool LoadCourses();
 	int Service();
-	void LoginUser();
+	Users* LoginUser();
 	void RegisterUser();
 	void Exit();
-	void ViewCourses(int=-1);
-
+	void ViewCourses();
+	bool SetAuthors();
 public:
 	bool start();
 	System(void);

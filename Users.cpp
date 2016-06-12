@@ -5,8 +5,8 @@
 Users::Users(void)
 {
 }
-void Users::HandleAll(){
-	return;
+bool Users::HandleAll(){
+	return true;
 }
 
 Users::~Users(void)

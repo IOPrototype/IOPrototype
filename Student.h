@@ -11,6 +11,7 @@ class Student :
 	Notes notes;
 
 	void ShowOwnedCourses();
+	void ShowAllCourses();
 	void ExecuteCourse();
 	void BuyCourse();
 	void DeactivateAccount();

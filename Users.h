@@ -1,5 +1,7 @@
 #pragma once
 #include "Course.h"
+#include "Console.h"
+#include "Notes.h"
 class Users
 {
 	friend class System;

@@ -23,3 +23,13 @@ Admin::Admin(std::vector<Course>* const _vcourses,std::vector<Users*>* _vusers,s
 Admin::~Admin(void)
 {
 }
+
+
+	void Admin::EditCourses(){}
+	void Admin::DeleteCourses(){}
+	void Admin::SetFeaturedAdvertisements(){}
+
+	void Admin::EditAccounts(){}
+	void Admin::DeleteUser(){}
+	void Admin::ShowUsers(){}
+	void Admin::ShowStatisticsOfUsers(){}

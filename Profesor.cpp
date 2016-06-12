@@ -27,11 +27,13 @@ Profesor::~Profesor(void)
 
 
 
-	void Profesor::SetPromotions(){}
-	void Profesor::SetArticles(){}
-	void Profesor::Advertisements(){}
+void Profesor::SetPromotions(){}
+void Profesor::SetArticles(){}
+void Profesor::Advertisements(){}
 
-	void Profesor::AddNewCourse(){}
-	void Profesor::EditCoures(){}
-	void Profesor::DeleteCourse(){}
-	void Profesor::ShowCourses(){}
+void Profesor::AddNewCourse(){}
+void Profesor::EditCoures(){}
+void Profesor::DeleteCourse(){}
+void Profesor::ShowAllCourses(){}
+
+void Profesor::ShowOwnedCourses(){}

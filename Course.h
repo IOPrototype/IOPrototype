@@ -15,6 +15,9 @@ public:
 	int getID(){return ID;}
 	int getID() const {return ID;}
 
+	float getPrice(){return Price;}
+	float getPrice() const {return Price;}
+
 	void Execute() const;
 
 	void Print();

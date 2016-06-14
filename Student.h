@@ -25,6 +25,7 @@ class Student :
 
 public:
 	bool HandleAll();
+	
 	Student(const std::vector<const Course>* const,const std::vector<const Users const*>* const,std::string&,std::string&,std::string&,std::string&,int,std::vector<int>&);
 	Student(const std::vector<const Course>* const,const std::vector<const Users const*>* const,std::string&,std::string&,std::string&,std::string&,int);
 	~Student(void);

@@ -21,8 +21,10 @@ class Profesor :
 	void ShowOwnedCourses();
 	void DeactivateAccount();
 
+
 public:
 	bool HandleAll();
+	
 	Profesor(std::vector<Course>* const,const std::vector<const Users const*>* const,std::string&,std::string&,std::string&,std::string&,int,std::vector<int>&);
 	~Profesor(void);
 };

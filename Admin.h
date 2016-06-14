@@ -7,18 +7,25 @@ class Admin :
 	std::vector<Users*>* const vusers;
 
 	Console MainConsole;
+	Notes notes;
 
 	void EditCourses();
-	void DeleteCourses();
+	bool DeleteCourses();
 	void SetFeaturedAdvertisements();
 
 	void EditAccounts();
-	void DeleteUser();
+	bool DeleteUser();
 	void ShowUsers();
+	void ShowAllCourses();
 	void ShowStatisticsOfUsers();
+	void StartConsole();
+	void OpenNotes();
+	void DeactivateAccount();
+
 
 public:
 	bool HandleAll();
+	
 	Admin(std::vector<Course>* const,std::vector<Users*>*,std::string&,std::string&,std::string&,std::string&,int);
 	~Admin(void);
 };

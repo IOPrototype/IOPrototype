@@ -1,0 +1,6 @@
+0	Jerzy	jk123	Jerzy	Watrobka	0	-1
+1	Jarek	kk123	Jarek	Urbaniuk	0	-1
+2	Janusz	ek123	Janusz	Zbigniewski	1	0	1	2
+3	Student	kkkk	Darek	Trymboniuk	2	0
+4	hurr	durr	Jan	Kowalski	1	3
+5	jjj	kkk	hurr	durr	2	-1

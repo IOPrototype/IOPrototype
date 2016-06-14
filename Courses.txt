@@ -1,0 +1,4 @@
+0	Techniki_Programowania	3	0	20.99	2
+1	Jak_nie_umrzec_na_studiach	999	1	0	2
+2	Modelowanie_Biznesowe	20	0	30.99	2
+3	Hurr_lol	20	1	0	4
